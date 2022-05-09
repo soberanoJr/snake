@@ -1,12 +1,14 @@
 from turtle import Screen
 from food import Food
 from snake import Snake
+from score import Score
 import time
 
 
 screen = Screen()
 snake = Snake()
 food = Food()
+score = Score()
 play = True
 
 screen.setup(width=1.0, height=1.0)
@@ -27,3 +29,4 @@ while play:
 
     if snake.head.distance(food) < 15:
         food.refresh()
+        score.count()
