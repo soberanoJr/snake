@@ -26,3 +26,11 @@ class Score(Turtle):
         self.score += 1
         self.clear()
         self.update()
+
+
+    def game_over(self):
+        self.clear()
+        self.write("GAME OVER", 
+                   align=ALIGNMENT, 
+                   font=FONT
+        )
