@@ -17,13 +17,19 @@ class Snake:
         self.head = self.segments[0]
 
     def create_snake(self):
-        for coordinate in COORDINATES:
-            snake = Turtle(shape="square")
-            snake.color("white")
-            snake.penup()
-            snake.goto(coordinate)
-            self.segments.append(snake)
+        for position in COORDINATES:
+            self.add_segment(position)
 
+    def add_segment(self, position):
+        snake = Turtle(shape="square")
+        snake.color("white")
+        snake.penup()
+        snake.goto(position)
+        self.segments.append(snake)
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
+        
     def move(self):
         for _ in range(len(self.segments) -1, 0, -1):
             x = self.segments[_ - 1].xcor()

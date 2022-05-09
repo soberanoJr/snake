@@ -30,6 +30,7 @@ while play:
     # detect collision with food
     if snake.head.distance(food) < 20:
         food.refresh()
+        snake.extend()
         score.count()
 
 
@@ -37,3 +38,12 @@ while play:
     if snake.head.xcor() > 350 or snake.head.xcor() < -350 or snake.head.ycor() > 250 or snake.head.ycor() < -250:
         play = False
         score.game_over()
+
+
+    # detect collision with tail
+    for segment in snake.segments:
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            play = False
+            score.game_over()
