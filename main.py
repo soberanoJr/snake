@@ -41,7 +41,7 @@ while play:
 
 
     # detect collision with tail
-    for segment in snake.segments:
+    for segment in snake.segments[1:]:
         if segment == snake.head:
             pass
         elif snake.head.distance(segment) < 10:
