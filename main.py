@@ -11,7 +11,7 @@ food = Food()
 score = Score()
 play = True
 
-screen.setup(width=1.0, height=1.0)
+screen.setup(width=300, height=300)
 screen.bgcolor("black")
 screen.title("===+" * 5 + "===:> snake")
 screen.tracer(0)
@@ -27,6 +27,7 @@ while play:
     time.sleep(0.1)
     snake.move()
 
-    if snake.head.distance(food) < 15:
+    # detect collision with food
+    if snake.head.distance(food) < 10:
         food.refresh()
         score.count()

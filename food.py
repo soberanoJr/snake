@@ -8,12 +8,15 @@ class Food(Turtle):
         super().__init__()
         self.shape("circle")
         self.penup()
-        self.shapesize(stretch_len=0.5, stretch_wid=0.5)
+        self.shapesize(
+            stretch_len=1, 
+            stretch_wid=1
+        )
         self.color("yellow")
         self.speed("fastest")
         self.refresh()
 
     def refresh(self):
-        x = random.uniform(-200, 200)
-        y = random.uniform(-200, 200)
+        x = random.uniform(-280, 280)
+        y = random.uniform(-280, 280)
         self.goto(x, y)
