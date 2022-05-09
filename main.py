@@ -11,7 +11,7 @@ food = Food()
 score = Score()
 play = True
 
-screen.setup(width=300, height=300)
+screen.setup(width=1.0, height=1.0)
 screen.bgcolor("black")
 screen.title("===+" * 5 + "===:> snake")
 screen.tracer(0)
