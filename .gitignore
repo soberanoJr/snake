@@ -5,3 +5,4 @@ venv/
 .nix
 .replit
 .toml
+.idea
