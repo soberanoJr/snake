@@ -16,6 +16,6 @@ class Food(Turtle):
 
     def refresh(self):
 
-        x = random.uniform(-330, 330)
-        y = random.uniform(-230, 230)
+        x = random.uniform(-380, 380)
+        y = random.uniform(-280, 280)
         self.goto(x, y)
